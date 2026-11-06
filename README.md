@@ -552,6 +552,14 @@ docker compose down
 docker compose up -d
 ```
 
+### Remove cloud image from php-virt-manager
+
+```bash
+cd /var/lib/libvirt/images
+sudo rm cloud-debian-12.qcow2
+sudo virsh vol-delete cloud-debian-12.qcow2 --pool default
+```
+
 ## 9. Final configuration checklist
 
 - [ ] KVM/QEMU installed.
