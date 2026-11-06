@@ -560,6 +560,14 @@ sudo rm cloud-debian-12.qcow2
 sudo virsh vol-delete cloud-debian-12.qcow2 --pool default
 ```
 
+### Add iso images to /var/lib/libvirt/images
+
+```bash
+cp debian-12.15.0-amd64-netinst.iso /var/lib/libvirt/images
+#Refresh the storage pool:
+sudo virsh pool-refresh default
+```
+
 ## 9. Final configuration checklist
 
 - [ ] KVM/QEMU installed.
